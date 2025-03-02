@@ -1,15 +1,11 @@
 package com.mariano.memorymanagement.service;
 
 /**
- * Executes all comparison services.
- * Organizes and structures test execution.
- *
  * @author Mariano Camposeco
  */
 public class ComparisonRunner {
 
     private ComparisonRunner() {
-        // Prevent instantiation
     }
 
     public static void runAllComparisons() {
