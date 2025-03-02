@@ -1,0 +1,54 @@
+# Ignore all IDE/editor-specific files (Anywhere in the project)
+**/.idea/
+**/.vscode/
+**/.vs/
+**/.settings/
+**/.project
+**/.classpath
+**/*.iml
+**/*.suo
+**/*.ntvs*
+**/*.njsproj
+**/*.sln
+**/*.sw?
+
+# Ignore build directories (Anywhere)
+**/target/
+**/out/
+**/bin/
+**/build/
+
+# Ignore compiled Java files (Anywhere)
+**/*.class
+
+# Ignore Maven files (Anywhere)
+**/.mvn/
+**/pom.xml.tag
+**/pom.xml.releaseBackup
+**/pom.xml.versionsBackup
+**/pom.xml.next
+**/release.properties
+
+# Ignore Gradle files (Anywhere)
+**/.gradle/
+**/gradle/
+**/build/
+**/gradlew
+**/gradlew.bat
+**/gradle-wrapper.jar
+
+# Ignore logs (Anywhere)
+**/*.log
+**/*.log.*
+
+# Ignore OS-specific files (Anywhere)
+**/.DS_Store
+**/Thumbs.db
+**/ehthumbs.db
+
+# Ignore environment variables (Anywhere)
+**/.env
+**/.env.local
+**/.env.development
+**/.env.production
+
