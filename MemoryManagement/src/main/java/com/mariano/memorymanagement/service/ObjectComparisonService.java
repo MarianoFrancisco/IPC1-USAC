@@ -26,14 +26,14 @@ public class ObjectComparisonService {
         CustomObject secondObject = new CustomObject(100);
 
         System.out.println("Observing identical objects (different references, same value):");
-        System.out.println("firstObject Value: " + firstObject.getValue() + " | Reference: " + memoryHelper.getHexIdentity(firstObject));
-        System.out.println("secondObject Value: " + secondObject.getValue() + " | Reference: " + memoryHelper.getHexIdentity(secondObject));
+        System.out.println("firstObject: " + firstObject + " | Reference: " + memoryHelper.getHexIdentity(firstObject));
+        System.out.println("secondObject: " + secondObject + " | Reference: " + memoryHelper.getHexIdentity(secondObject));
 
         firstObject.setValue(200);
 
         System.out.println("\nAfter modifying firstObject:");
-        System.out.println("firstObject Value: " + firstObject.getValue() + " | Reference: " + memoryHelper.getHexIdentity(firstObject));
-        System.out.println("secondObject Value (Unchanged): " + secondObject.getValue() + " | Reference: " + memoryHelper.getHexIdentity(secondObject));
+        System.out.println("firstObject : " + firstObject + " | Reference: " + memoryHelper.getHexIdentity(firstObject));
+        System.out.println("secondObject (Unchanged): " + secondObject + " | Reference: " + memoryHelper.getHexIdentity(secondObject));
 
         System.out.println();
     }
@@ -43,14 +43,14 @@ public class ObjectComparisonService {
         CustomObject secondObject = firstObject;
 
         System.out.println("Observing objects with the same reference:");
-        System.out.println("firstObject Value: " + firstObject.getValue() + " | Reference: " + memoryHelper.getHexIdentity(firstObject));
-        System.out.println("secondObject Value: " + secondObject.getValue() + " | Reference: " + memoryHelper.getHexIdentity(secondObject));
+        System.out.println("firstObject: " + firstObject + " | Reference: " + memoryHelper.getHexIdentity(firstObject));
+        System.out.println("secondObject: " + secondObject + " | Reference: " + memoryHelper.getHexIdentity(secondObject));
 
         firstObject.setValue(400);
 
         System.out.println("\nAfter modifying firstObject:");
-        System.out.println("firstObject Value: " + firstObject.getValue() + " | Reference: " + memoryHelper.getHexIdentity(firstObject));
-        System.out.println("secondObject Value (Also Changed): " + secondObject.getValue() + " | Reference: " + memoryHelper.getHexIdentity(secondObject));
+        System.out.println("firstObject: " + firstObject + " | Reference: " + memoryHelper.getHexIdentity(firstObject));
+        System.out.println("secondObject (Also Changed): " + secondObject + " | Reference: " + memoryHelper.getHexIdentity(secondObject));
 
         System.out.println();
     }
@@ -60,8 +60,8 @@ public class ObjectComparisonService {
         CustomObject secondObject = new CustomObject(300);
 
         System.out.println("Comparing two objects with the same value but different references:");
-        System.out.println("firstObject Value: " + firstObject.getValue() + " | Reference: " + memoryHelper.getHexIdentity(firstObject));
-        System.out.println("secondObject Value: " + secondObject.getValue() + " | Reference: " + memoryHelper.getHexIdentity(secondObject));
+        System.out.println("firstObject: " + firstObject + " | Reference: " + memoryHelper.getHexIdentity(firstObject));
+        System.out.println("secondObject: " + secondObject + " | Reference: " + memoryHelper.getHexIdentity(secondObject));
 
         System.out.println();
         equalHelper.compareCustomObjectsWithEquals(firstObject, secondObject);
