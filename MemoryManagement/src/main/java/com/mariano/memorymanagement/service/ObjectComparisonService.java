@@ -29,7 +29,6 @@ public class ObjectComparisonService {
         System.out.println("firstObject Value: " + firstObject.getValue() + " | Reference: " + memoryHelper.getHexIdentity(firstObject));
         System.out.println("secondObject Value: " + secondObject.getValue() + " | Reference: " + memoryHelper.getHexIdentity(secondObject));
 
-        // Modify firstObject value
         firstObject.setValue(200);
 
         System.out.println("\nAfter modifying firstObject:");
