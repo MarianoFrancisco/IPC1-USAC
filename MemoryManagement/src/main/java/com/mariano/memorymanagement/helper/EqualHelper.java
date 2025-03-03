@@ -35,6 +35,10 @@ public class EqualHelper {
         System.out.println("String: " + (first.equals(second) ? "equal (equals())" : "different (equals())"));
     }
 
+    public void compareCustomObjectsWithDoubleEquals(CustomObject first, CustomObject second) {
+        System.out.println("CustomObject: " + (first == second ? "equal (==)" : "different (==)"));
+    }
+
     public void compareCustomObjectsWithEquals(CustomObject first, CustomObject second) {
         System.out.println("CustomObject: " + (first.equals(second) ? "equal (equals())" : "different (equals())"));
     }

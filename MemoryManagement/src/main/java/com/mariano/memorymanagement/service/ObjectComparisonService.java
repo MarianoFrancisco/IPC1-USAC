@@ -64,6 +64,7 @@ public class ObjectComparisonService {
         System.out.println("secondObject: " + secondObject + " | Reference: " + memoryHelper.getHexIdentity(secondObject));
 
         System.out.println();
+        equalHelper.compareCustomObjectsWithDoubleEquals(firstObject, secondObject);
         equalHelper.compareCustomObjectsWithEquals(firstObject, secondObject);
     }
 }
