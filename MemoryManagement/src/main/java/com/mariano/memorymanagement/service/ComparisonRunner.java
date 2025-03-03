@@ -40,6 +40,9 @@ public class ComparisonRunner {
 
         System.out.println("\n--------------------------------------------------");
         stringComparison.compareMixedStringReferences();
+
+        System.out.println("\n--------------------------------------------------");
+        stringComparison.demonstrateStringImmutability();
     }
 
     private static void runObjectComparisons() {
