@@ -2,7 +2,7 @@ package com.mariano.swing.gui;
 
 /**
  *
- * @author Maria
+ * @author Mariano Camposeco {@literal (mariano1941@outlook.es)}
  */
 public class NextOption extends javax.swing.JFrame {
 
