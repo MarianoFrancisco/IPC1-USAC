@@ -1,5 +1,6 @@
 package com.mariano.ipc1.threads;
 
+import com.mariano.ipc1.helpers.TimeBarHelper;
 import com.mariano.ipc1.utils.AppUIUtils;
 import java.awt.Color;
 import javax.swing.JProgressBar;
@@ -33,10 +34,9 @@ public class TimeThread extends Thread {
 
     @Override
     public void run() {
-        timeBar.setValue(100);
-        timeBar.setForeground(Color.GREEN);
+        TimeBarHelper timeBarHelper = new TimeBarHelper(timeBar);
 
-        while (timeBar.getValue() > 0 && running) {
+        while (running && !Thread.currentThread().isInterrupted()) {
             try {
                 Thread.sleep(100);
 
@@ -44,21 +44,16 @@ public class TimeThread extends Thread {
                     continue;
                 }
 
-                int current = timeBar.getValue();
-                int newValue = current - 1;
-
-                timeBar.setValue(newValue);
-
-                if (newValue > 50) {
-                    timeBar.setForeground(Color.GREEN);
-                } else if (newValue > 20) {
-                    timeBar.setForeground(Color.ORANGE);
-                } else {
-                    timeBar.setForeground(Color.RED);
+                boolean hasTime = timeBarHelper.update();
+                if (!hasTime) {
+                    break;
                 }
 
             } catch (InterruptedException ex) {
                 if (!running) {
+                    break;
+                } else {
+                    AppUIUtils.showError("The thread was interrupted unexpectedly.");
                     break;
                 }
             }
