@@ -2,7 +2,6 @@ package com.mariano.ipc1.threads;
 
 import com.mariano.ipc1.helpers.TimeBarHelper;
 import com.mariano.ipc1.utils.AppUIUtils;
-import java.awt.Color;
 import javax.swing.JProgressBar;
 
 /**
